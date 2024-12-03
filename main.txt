@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1 - Эллипс, 2 - Гиперболла");
+        int p = sc.nextInt();
+        if (p == 1)
+        {
+            System.out.println("Введите a: ");
+            double a = sc.nextDouble();
+            System.out.println("Введите b: ");
+            double b = sc.nextDouble();
+            Function ellipse= new Ellipse(a, b);
+            System.out.print("Введите значение x: ");
+            double x = sc.nextDouble();
+            ellipse.print(x);
+
+        }
+        if (p == 2)
+        {
+            System.out.println("Введите a: ");
+            double a = sc.nextDouble();
+            System.out.println("Введите b: ");
+            double b = sc.nextDouble();
+            Hyperbola hyperbola= new Hyperbola(a, b);
+            System.out.print("Введите значение x: ");
+            double x = sc.nextDouble();
+            hyperbola.print(x);
+        }
+        }
+}

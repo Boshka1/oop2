@@ -1,0 +1,19 @@
+class Ellipse implements Function {
+    double a, b;
+
+    public Ellipse(double a, double b) {
+        this.a = a;
+        this.b = b;
+    }
+
+    @Override
+    public double findX(double x) {
+        return Math.sqrt(1 - (x * x) / (a * a)) * b;
+    }
+
+    @Override
+    public void print(double x) {
+        double y = findX(x);
+        System.out.println("Эллипс в точке: (" +x+", " +y+ ")");
+    }
+}

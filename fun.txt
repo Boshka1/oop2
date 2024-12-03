@@ -1,0 +1,4 @@
+interface Function {
+    double findX(double x);
+    void print(double x);
+}
